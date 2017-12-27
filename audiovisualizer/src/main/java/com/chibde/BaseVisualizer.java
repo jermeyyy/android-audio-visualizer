@@ -68,8 +68,8 @@ abstract public class BaseVisualizer extends View {
         this.paint.setColor(this.color);
     }
 
-    public void setPlayer(MediaPlayer mediaPlayer) {
-        visualizer = new Visualizer(mediaPlayer.getAudioSessionId());
+    public void setPlayer(int audioPlayerSessionId) {
+        visualizer = new Visualizer(audioPlayerSessionId);
         visualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
 
         visualizer.setDataCaptureListener(new Visualizer.OnDataCaptureListener() {
